@@ -1,0 +1,223 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+
+}
+
+body {
+    background-image: url("https://loremflickr.com/1600/900/nature,city,landscape");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.caixa-maior {
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 20px;
+    width: 450px;
+    border-radius: 20px;
+}
+
+.input-cidade {
+    border: none;
+    padding: 10px;
+    outline: none;
+    border-radius: 20px;
+    width: calc(100% -100px);
+    font-size: 20px;
+    background-color: #7c7c7c2b;
+    color: #fff;
+
+}
+
+.botao {
+    background-color: #dbf7f32b;
+    border: none;
+    padding: 10px;
+    margin-left: 8px;
+    border-radius: 50%;
+    cursor: pointer;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.botao:hover {
+    background-color: #7c7c7c;
+    transform: scale(1.3);
+    transition: 0.4s;
+}
+
+.img-botao {
+    width: 20px;
+    height: 20px;
+    filter: invert(1);
+    mix-blend-mode: screen;
+    background-color: #f2f7f7;
+
+}
+
+.caixa-media {
+    margin-top: 30px;
+
+}
+
+.cidade {
+    font-size: 28px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.temperatura {
+    font-size: 24px;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #fff;
+
+}
+
+
+.umidade {
+    font-size: 18px;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.botao-ia {
+    background-color: #235af3;
+    color: #faf8f8;
+    border: none;
+    padding: 15px;
+    margin-top: 10px;
+    border-radius: 29px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.botao-ia:active {
+    transform: scale(0.99);
+    transition: 0.10s;
+    opacity: 0.5;
+    color: #dbd1d1;
+
+}
+
+.resposta-ia {
+    margin-top: 15px;
+    font-size: 16px;
+    color: #fff;
+    line-height: 1.5;
+
+}
+
+/* ---------- Responsividade--------------*/
+
+/* Dispositivos pequenos (smartphones) */
+
+@media (max-width: 480px) {
+
+    .caixa-maior {
+        width: 98%;
+        padding: 39px;
+    }
+
+    .input-cidade {
+        font-size: 16px;
+        padding: 17px;
+        margin-left: -25px;
+        text-align: center;
+        border-radius: 150px;
+    }
+
+    .cidade {
+        font-size: 22px;
+    }
+
+    .temperatura {
+        font-size: 20px;
+    }
+
+    .umidade {
+        font-size: 16px;
+    }
+
+    .botao-ia {
+        font-size: 16px;
+        padding: 12px;
+       
+    }
+
+    .resposta-ia {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .img-botao {
+        width: 20px;
+        height: 20px;
+        filter: invert(1);
+        mix-blend-mode: screen;
+        background-color: #f2f7f7;
+    }
+}
+
+
+    /* Tablets */
+    @media (min-width: 481px) and (max-width: 768px) {
+        .caixa-maior {
+            width: 80%;
+            padding: 18px;
+        }
+
+        .input-cidade {
+            font-size: 18px;
+            padding: 9px;
+        }
+
+        .cidade {
+            font-size: 25px;
+        }
+
+        .temperatura {
+            font-size: 22px;
+        }
+
+        .umidade {
+            font-size: 17px;
+        }
+
+        .botao-ia {
+            font-size: 17px;
+            padding: 13px;
+        }
+
+        .resposta-ia {
+            font-size: 15px;
+        }
+    }
+
+    /* Desktop pequeno */
+    @media (min-width: 769px) and (max-width: 1024px) {
+        .caixa-maior {
+            width: 60%;
+        }
+    }
+
+    /* Desktop grande */
+    @media (min-width: 1025px) {
+        .caixa-maior {
+            width: 450px;
+        }
+    }
