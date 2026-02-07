@@ -70,6 +70,7 @@ app.post('/ai/suggest', async (req, res) => {
     if (!resp.ok) {
       const errMsg = json?.error?.message || 'Erro desconhecido'
       console.error('Groq API error:', errMsg)
+
       // Se a API da IA falhar, usar sugestão estática como fallback
       const sugestaoEstática = gerarSugestaoRoupa(temperature, humidity)
       return res.json({ content: sugestaoEstática + ' (modo fallback)', raw: json })
@@ -84,17 +85,18 @@ app.post('/ai/suggest', async (req, res) => {
 })
 
 // Função auxiliar para gerar sugestão de roupa quando API não está disponível
+
 function gerarSugestaoRoupa(temp, umidade) {
   if (temp < 10) {
     return `Com ${temp}°C, use casaco pesado, cachecol, gorro e luvas. Umidade: ${umidade}%`
   } else if (temp < 15) {
-    return `Com ${temp}°C, use casaco de meia estação, suéter. Umidade: ${umidade}%`
+    return `Com ${temp}°C, use casaco de meia estação, suéter. Umidade em: ${umidade}% cuide-se!`
   } else if (temp < 20) {
-    return `Com ${temp}°C, use uma jaqueta leve ou suéter. Umidade: ${umidade}%`
+    return `Com ${temp}°C, use uma jaqueta leve ou suéter. Umidade em: ${umidade}% cuide-se!`
   } else if (temp < 25) {
-    return `Com ${temp}°C, use roupas confortáveis de meia estação. Umidade: ${umidade}%`
+    return `Com ${temp}°C, use roupas confortáveis de meia estação. Umidade em: ${umidade}% cuide-se!`
   } else {
-    return `Com ${temp}°C, prefira roupas leves e respiráveis. Umidade: ${umidade}%`
+    return `Com ${temp}°C, prefira roupas leves e respiráveis. Umidade em: ${umidade}% cuide-se!`
   }
 }
 

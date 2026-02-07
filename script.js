@@ -1,5 +1,6 @@
 
 // URL do backend (ajuste conforme necessário)
+
 const BACKEND_URL = 'http://localhost:3002'
 
 async function cliqueiNoBotao() {
@@ -33,6 +34,7 @@ async function cliqueiNoBotao() {
 }
 
 /*------------------ Reconhecimento de voz ------------------*/
+
 function detectaVoz() {
  /* alert("Clique em 'Permitir' microfone do seu dispositivo.")*/
 
